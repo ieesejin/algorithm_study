@@ -23,6 +23,3 @@ def solution(cacheSize, cities):
                 answer += 5
 
     return answer
-
-
-print(solution(3, ["a", "b", "c", "b"]))
