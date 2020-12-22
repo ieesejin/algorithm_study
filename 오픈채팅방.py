@@ -21,14 +21,15 @@ def solution(record):
             elif rec[0] == 'Leave':
                 user[rec[1]][1].append((rec[0], idx))
 
-    answer = ['' for _ in range(actCount)]
+    answer = ["" for _ in range(actCount)]
     for nickName, idxs in user.values():
         for act, idx in idxs:
             if act == 'Enter':
-                answer[idx] = nickName + '님이 들어왔습니다.'
+                answer[idx] = "{}님이 들어왔습니다.".format(nickName)
             if act == 'Leave':
-                answer[idx] = nickName + '님이 나갔습니다.'
+                answer[idx] = "{}님이 나갔습니다.".format(nickName)
 
     return answer
+
 
 print(solution(["Enter uid1234 Muzi", "Enter uid4567 Prodo","Leave uid1234","Enter uid1234 Prodo","Change uid4567 Ryan"]))
