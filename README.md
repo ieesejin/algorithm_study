@@ -38,3 +38,13 @@ for num in nums:
 while heap:
   print(heapq.heappop(heap)[1])  # index 1
 ```
+### 접두사 확인
+> str1.startswith(str2)
+> 
+> return type: boolean
+```python
+str1 = "helloworld"
+str2 = "hel"
+str1.startswith(str2)
+# return True
+```
