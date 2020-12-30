@@ -23,9 +23,9 @@ heapq.heapify(heap) # O(N)
 heapq.heappop(heap) # O(log N)
 heapq.heappush(heap, 1) # O(log N)
 ```
-heap[0]으로 최소값을 가져올 수 있다.
-
-최대 힙은 지원을 하지 않으므로 heap (-num, num)으로 최대값을 가져올 수 있다.
+> heap[0]으로 최소값을 가져올 수 있다.
+>
+> 최대 힙은 지원을 하지 않으므로 heap (-num, num)으로 최대값을 가져올 수 있다.
 ```python
 import heapq
 
