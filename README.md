@@ -48,3 +48,14 @@ str2 = "hel"
 str1.startswith(str2)
 # return True
 ```
+
+### zip
+> zip(list1, list2)
+>
+> return as list and element as tuple
+```python
+list1 = [1, 2, 3]
+list2 = [4, 5, 6]
+zip(list1, list2)
+# result: [(1, 4), (2, 5), (3, 6))
+```
