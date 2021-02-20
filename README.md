@@ -59,3 +59,62 @@ list2 = [4, 5, 6]
 zip(list1, list2)
 # result: [(1, 4), (2, 5), (3, 6))
 ```
+
+### Counter
+> collections.Counter()
+> 
+> return as Dictionary
+> 갯수가 많은 것 순으로 return 한다.
+```python
+import collections
+list1 = ['a', 'b', 'c', 'a', 'b', 'e']
+collections.Counter(list1)
+# return: Counter({'a': 2, 'b': 2, 'c': 1, 'e': 1})
+
+str1 = "ababc"
+collections.Counter(str1)
+# return: Counter({'a': 2, 'b': 2, 'c': 1})
+>```
+
+##### method
+> update(): Counter 값을 갱신
+```python
+import collections
+a = collections.Counter()
+a.update("ababc")
+```
+> elements(): 요소들을 무작위 순서로 반환한다.
+
+> most_common(): 요소들을 빈도수가 높은 순으로 (요소, 빈도수) 투플로 이루어진 list를 반환한다.
+```python
+import collections
+a = collections.Counter("aaabcc")
+a.most_common()
+# return: [('a', 3), ('c', 2), ('b', 1)]
+a.most_common(3)
+# return: [('a', 3)]
+```
+
+### 순열, 조합
+> 순열: itertools.permutations
+>
+> 중복을 허용하지 않고 n개에서 r개를 뽑아서 나열까지 방법
+>
+> 중복을 허용하진 않지만 뽑는 순서는 의미가 있다.
+```python
+import itertools
+a = itertools.permutations([1, 2, 3, 4], 2)
+# a: (1, 2) (1, 3) (1, 4) (2, 1) (2, 3) (2, 4) (3, 1) (3, 2) (3, 4) (4, 1) (4, 2) (4, 3)
+# 순서가 의미가 있기 때문에 (1, 2)와 (2, 1)은 다른 것으로 간주한다.
+```
+
+> 조합: itertools.combinations
+>
+> 중복을 허용하지 않고 n개에서 r개를 뽑는 방법
+>
+> 순서가 의미가 없기 때문에 순열과 다르게 (1, 2) (2, 1)은 같은 것이다.
+```python
+import itertools
+a = itertools.combinations([1, 2, 3, 4], 2)
+# a: (1, 2) (1, 3) (1, 4) (2, 3) (2, 4) (3, 4)
+```
