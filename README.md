@@ -118,3 +118,38 @@ import itertools
 a = itertools.combinations([1, 2, 3, 4], 2)
 # a: (1, 2) (1, 3) (1, 4) (2, 3) (2, 4) (3, 4)
 ```
+
+### 문자열 문자, 숫자 확인
+> isalpha(), isdigit()
+> 
+> 문자열에서 문자와 숫자를 확인
+>
+> return: boolean
+```python
+num = '100'
+str1 = 'abc'
+str2 = '한글'
+
+print(num.isalpha()) # False
+print(str1.isalpha()) # True
+print(str2. isalpha()) # True
+
+print(num.isdigit()) # True
+print(str1.isdigit()) # False
+print(str2.isdigit()) # False
+
+print('-_!@'.isdigit()) # False
+print('-_!@'.isalpha()) # False
+```
+
+### 문자열 치환
+> str = str.replace('치환 전 문자', '치환 후 문자', 치환 횟수)
+>
+> 치환 횟수는 생략가능 --> 생략하면 전부 치환
+```python
+str1 = 'abab'
+atoc = str1.replace('a', 'c')
+print(atoc) # 'cbcb'
+atob = str1.replace('a', 'b', 1)
+print(atob) # 'bbab'
+```
