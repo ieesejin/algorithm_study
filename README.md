@@ -153,3 +153,35 @@ print(atoc) # 'cbcb'
 atob = str1.replace('a', 'b', 1)
 print(atob) # 'bbab'
 ```
+
+
+### 이진탐색
+> python 표준 라이브러리로 이진탐색 알고리즘으로 오름차순으로 정렬된 리스트에 x 값이 들어갈 위치를 탐색하거나 삽입할 수 있다.
+>
+> bisect(a, x), bisect_right(a, x) --> 리스트 a에 이미 x 값이 있을 때 뒤쪽 위치를 리턴
+> 
+> bisect_left(a, x) --> 리스트 a에 이미 x 값이 있을 때 왼쪽 위치를 리턴
+>
+> insort(a, x) --> 리스트 a에 x를 삽입한다.
+```python
+import bisect
+
+a = [1, 3, 4, 5]
+print(bisect.bisect_right(a, 3)) # 2
+print(bisect.bisect_left(a, 3)) # 1
+
+bisect.insort(a, 2)
+print(a) # [1, 2, 3, 4, 5]
+```
+
+
+### 문자열 앞 자릿수 맞춰 0 채우기
+> str.zfill(자릿 수) --> 자릿수가 될 때까지 앞에 0으로 채움
+>
+> str.rjust(자릿 수, 문자) --> 자릿수가 될 때까지 앞에 '문자'로 채움
+```python
+a = '2'
+print(a.zfill(3)) # '003'
+print(a.rjust(3, "0")) # '003'
+print(a.rjust(3, "a")) # 'aa3'
+```
