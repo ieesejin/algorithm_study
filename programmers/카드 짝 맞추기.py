@@ -11,7 +11,7 @@ def solution(board, r, c):
         for x in range(4):
             if board[y][x] != 0:
                 card = board[y][x]
-                if card not in cards.keys():ㅎ
+                if card not in cards.keys():
                     cards[card] = [(y, x)]
                 else:
                     cards[card].append((y, x))
